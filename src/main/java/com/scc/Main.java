@@ -461,8 +461,21 @@ public class Main {
                                     break;
                                 }
                                 if (system.addDriver(dId, name, lic)) {
-                                    System.out.println("Driver registered successfully.");
+                                    boolean savedToDB = false; initializeDAO.registerDriver(dId, name, lic, "IDLE");
+                                    
+                                    if(savedToDB){
+                                        System.out.println("Driver saved Sucessfully");
+                                    }
+                                    else {
+                                        System.out.println("Warning: Added locally, but failed to save to database (ID or Plate might already exist in SQLite).");
+                                    }
+
+
                                 }
+                                catch () {
+
+                            }
+
                                 break;
 
                             case "3":

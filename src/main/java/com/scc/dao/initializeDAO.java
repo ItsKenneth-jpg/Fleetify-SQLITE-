@@ -1,9 +1,6 @@
 package com.scc.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class initializeDAO {
 
@@ -27,13 +24,24 @@ public class initializeDAO {
             return false;
         }
     }
-    public static boolean registerDriver(String id, String name, String status){
-        String sql = "INSERT INTO driver (id, name, status) VALUES (?, ?, 'IDLE')";
+    public static boolean registerDriver(String id, String name, String license, String status){
+        String sql = "INSERT INTO driver (id, name, licence, status) VALUES (?, ?, ?, 'IDLE')";
 
         try (Connection conn = DatabaseConnection.getDriverConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
 
+            pstmt.setString(1, id);
+            pstmt.setString(2, name);
+            pstmt.setString(3, license);
+
+            pstmt.executeUpdate();
+            return true;
+
+
             
+        } catch (SQLException e){
+            System.out.println("Database Error registering Driver: " + e.getMessage());
+            return false;
         }
     }
 }
