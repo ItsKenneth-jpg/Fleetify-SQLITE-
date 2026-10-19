@@ -444,7 +444,7 @@ public class Main {
                             case "2":
                                 System.out.print("Enter Driver ID: ");
                                 String dId = scanner.nextLine();
-                                if (dId.length() <= 3) {
+                                if (dId.length() <= 2) {
                                     System.out.println("Invalid Driver ID.");
                                     break;
                                 }

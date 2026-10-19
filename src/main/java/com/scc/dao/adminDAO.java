@@ -18,7 +18,7 @@ public class adminDAO {
         // Exclude 'id' from the columns list
         String sql = "INSERT INTO admin(username, password, securityCode, role, status) VALUES(?, ?, ?, 'ADMIN', 'PENDING')";
 
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = DatabaseConnection.getUserConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, username);

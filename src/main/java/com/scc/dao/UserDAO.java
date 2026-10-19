@@ -11,7 +11,7 @@ public class UserDAO {
 
         String sql = "INSERT INTO users(username, password, roles, status) VALUES(?, ?, ?, 'PENDING')";
 
-        try(Connection conn = DatabaseConnection.getConnection();
+        try(Connection conn = DatabaseConnection.getUserConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql)){
 
             pstmt.setString(1, username);
@@ -33,7 +33,7 @@ public class UserDAO {
         // Query checks both credentials and whether the account is approved (not PENDING)
         String sql = "SELECT * FROM admin WHERE username = ? AND password = ?";
 
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = DatabaseConnection.getUserConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, username);
