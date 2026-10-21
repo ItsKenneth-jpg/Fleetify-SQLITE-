@@ -381,7 +381,7 @@ public class Main {
                 System.out.print("Enter Password: ");
                 String loginPass = sc.nextLine();
 
-                if(adminDAO.login(loginuser, loginPass)){
+                if(USER_DAO.login(loginuser, loginPass)){
                     System.out.println("Redirecting to Dashboard.");
 
                     while (true){
