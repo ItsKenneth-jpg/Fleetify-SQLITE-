@@ -8,6 +8,11 @@ public class adminDAO {
 
     private static final String ADMIN_CODE = "FLEETIFY-ADMIN";
 
+    public static boolean login(String loginuser, String loginPass)
+    {
+
+    }
+
     // Removed 'id' from parameters since the database auto-increments it
     public boolean registerAdmin(String username, String password, String securityCode) {
         if (!ADMIN_CODE.equals(securityCode)) {

@@ -381,7 +381,7 @@ public class Main {
                 System.out.print("Enter Password: ");
                 String loginPass = sc.nextLine();
 
-                if(USER_DAO.login(loginuser, loginPass)){
+                if(adminDAO.login(loginuser, loginPass)){
                     System.out.println("Redirecting to Dashboard.");
 
                     while (true){
@@ -472,9 +472,7 @@ public class Main {
 
 
                                 }
-                                catch () {
 
-                            }
 
                                 break;
 
@@ -669,6 +667,31 @@ public class Main {
                         }
                         break;
                     case "2":
+                        System.out.println("\n================================");
+                        System.out.println("            Roles");
+                        System.out.println("================================");
+                        System.out.println("[1] Transit Schedulers");
+                        System.out.println("[2] Fleet Dispatchers");
+                        System.out.println("[3] Human Resources");
+                        System.out.println("================================");
+                        System.out.print("Enter role: ");
+                        String role = sc.nextLine();
+
+                        switch (role){
+                            case "1":
+                                System.out.println("\n================================");
+                                System.out.println("      Transit Schedulers");
+                                System.out.println("================================");
+                                System.out.print("Enter username: ");
+                                String usernamee = sc.nextLine();
+                                System.out.print("Enter password: ");
+                                String passwordd = sc.nextLine();
+                                System.out.print("Enter Security Code: ");
+                                String securityCodee = sc.nextLine();
+
+                        }
+
+
 
                 }
 

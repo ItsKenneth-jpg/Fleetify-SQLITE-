@@ -25,7 +25,7 @@ public class initializeDAO {
         }
     }
     public static boolean registerDriver(String id, String name, String license, String status){
-        String sql = "INSERT INTO driver (id, name, licence, status) VALUES (?, ?, ?, 'IDLE')";
+        String sql = "INSERT INTO driver (id, name, license, status) VALUES (?, ?,?, ?)";
 
         try (Connection conn = DatabaseConnection.getDriverConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)){
@@ -33,6 +33,7 @@ public class initializeDAO {
             pstmt.setString(1, id);
             pstmt.setString(2, name);
             pstmt.setString(3, license);
+            pstmt.setString(4, status);
 
             pstmt.executeUpdate();
             return true;

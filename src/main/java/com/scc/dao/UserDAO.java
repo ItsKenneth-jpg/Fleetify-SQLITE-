@@ -9,7 +9,7 @@ public class UserDAO {
 
     public boolean registerUser(String username, String password, String role){
 
-        String sql = "INSERT INTO users(username, password, roles, status) VALUES(?, ?, ?, 'PENDING')";
+        String sql = "INSERT INTO users(username, password, role, status) VALUES(?, ?, ?, 'PENDING')";
 
         try(Connection conn = DatabaseConnection.getUserConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql)){
