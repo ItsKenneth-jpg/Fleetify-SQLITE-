@@ -675,7 +675,7 @@ public class Main {
                         System.out.println("[3] Human Resources");
                         System.out.println("================================");
                         System.out.print("Enter role: ");
-                        String role = sc.nextLine();
+                        Integer role = sc.nextInt();
 
                         switch (role){
                             case "1":
@@ -688,6 +688,13 @@ public class Main {
                                 String passwordd = sc.nextLine();
                                 System.out.print("Enter Security Code: ");
                                 String securityCodee = sc.nextLine();
+
+                                UserDAO UserDAO= new UserDAO();
+
+                                if(UserDAO.registerUser(usernamee, passwordd, securityCodee, role)){
+                                    System.out.println("Account Successfully registered.");
+
+                                }
 
                         }
 

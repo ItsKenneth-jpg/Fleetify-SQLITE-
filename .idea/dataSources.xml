@@ -8,14 +8,14 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/initialize.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="initialize.db" uuid="a338385e-a394-45d8-a16c-65bbcc3ef3c5">
+    <data-source source="LOCAL" name="initialize.db" uuid="c4060e6c-f2fc-4fcb-9b90-00e00a96c89e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\Kenneth\Music\Fleetify-SQLITE-\initialize.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="users.db" uuid="959a82c7-5f18-401d-a0eb-17d8d6cd29f1">
+    <data-source source="LOCAL" name="users.db" uuid="45746944-909a-46a6-a1df-83d541ceda52">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
